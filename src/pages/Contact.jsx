@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Container, Row, Col, Form, FormGroup, Input } from "reactstrap";
 import Helmet from "../components/Helmet/Helmet";
 import CommonSection from "../components/UI/CommonSection";
+import { useState } from "react";
 
 import "../styles/contact.css";
 
@@ -26,6 +27,26 @@ const socialLinks = [
 ];
 
 const Contact = () => {
+  const [data, setData] = useState([])
+  const handleChange = (e) => {
+    setData({ ...data, [e.target.name]: e.target.value , [e.target.email]: e.target.value ,[e.target.message]: e.target.value })
+  }
+  const handleSubmit = async(e) => 
+  {
+    e.preventDefault()
+    const res = await fetch('http://localhost:3001/contact/add', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+      
+    })
+    console.log(data)
+    const responce = await res.text()
+    console.log(responce)
+
+  }
   return (
     <Helmet title="Contact">
       <CommonSection title="Contact" />
@@ -35,22 +56,24 @@ const Contact = () => {
             <Col lg="7" md="7">
               <h6 className="fw-bold mb-4">Get In Touch</h6>
 
-              <Form>
+              <Form onSubmit={handleSubmit}>
                 <FormGroup className="contact__form">
-                  <Input placeholder="Your Name" type="text" />
+                  <Input placeholder="Your Name" type="text" name="name" onChange={handleChange}/>
                 </FormGroup>
                 <FormGroup className="contact__form">
-                  <Input placeholder="Email" type="email" />
+                  <Input placeholder="Email" type="email" name="email" onChange={handleChange} />
                 </FormGroup>
                 <FormGroup className="contact__form">
                   <textarea
                     rows="5"
                     placeholder="Message"
                     className="textarea"
+                    onChange={handleChange}
+                    name = "message"
                   ></textarea>
                 </FormGroup>
 
-                <button className=" contact__btn" type="submit">
+                <button onClick={handleSubmit} className=" contact__btn" type="submit">
                   Send Message
                 </button>
               </Form>
