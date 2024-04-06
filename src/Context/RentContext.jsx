@@ -3,7 +3,8 @@ import React, {useContext, useEffect, useState} from 'react';
 
 import ABI from "./CarRenting.json";
 
-const Address = "0xB5FC52E3C8702d097C2cdea1F4305743BCad3040"; 
+// const Address = "0xB5FC52E3C8702d097C2cdea1F4305743BCad3040"; 
+const Address = "0xbF274F26D5E170242Bf6B86d7Da2Fa4CB7d3acf5"; 
 
 const RPC = 'https://sepolia.infura.io/v3/0a34a7e280ec4361bc97c6f447f0bd4a';
 const provider = new ethers.providers.JsonRpcProvider(RPC);
@@ -15,44 +16,44 @@ const contract = new ethers.Contract(Address, ABI, wallet);
 export const RentContext = React.createContext();
 
 export const  RentProvider = ({children}) => {
-    const [cars, setCars] = useState([]);
+    // const [cars, setCars] = useState([]);
 
-    const getAllCar = async () => {
-        try{
-            const car = await contract.getAllCarsDetails();
-            setCars(car);
-            console.log(car);
-            return car;
-        }
-        catch(err){
-            console.log(err);
-        }
+    // const getAllCar = async () => {
+    //     try{
+    //         const car = await contract.getAllCarsDetails();
+    //         setCars(car);
+    //         console.log(car);
+    //         return car;
+    //     }
+    //     catch(err){
+    //         console.log(err);
+    //     }
 
-    }
+    // }
 
-    const addCar = async (_model, _rentalFee) => {
-        try{
-            await contract.addCar(_model, _rentalFee);
-        }
-        catch (err){
-            console.log(err);
-        }
-    }
+    // const addCar = async (_model, _rentalFee) => {
+    //     try{
+    //         await contract.addCar(_model, _rentalFee);
+    //     }
+    //     catch (err){
+    //         console.log(err);
+    //     }
+    // }
 
-    const modifyCarDetails = async (_carId, _newModel, _newRentalFee) => {
+    // const modifyCarDetails = async (_carId, _newModel, _newRentalFee) => {
+    //     try {
+    //         // await contract.methods.updateCarDetails(_carId, _newModel, _newRentalFee).send({ from: address });
+    //         await contract.updateCarDetails(_carId, _newModel, _newRentalFee);
+    //         await getAllCar();
+    //       } catch (error) {
+    //         console.error("Error updating car details:", error);
+    //         throw new Error('Failed to update car details. Please try again.');
+    //       }
+    // }
+
+    const rentCar = async (_carId, _firstName, _lastName, _date, _phoneNumber, _email, _rentHours) => {
         try {
-            // await contract.methods.updateCarDetails(_carId, _newModel, _newRentalFee).send({ from: address });
-            await contract.updateCarDetails(_carId, _newModel, _newRentalFee);
-            await getAllCar();
-          } catch (error) {
-            console.error("Error updating car details:", error);
-            throw new Error('Failed to update car details. Please try again.');
-          }
-    }
-
-    const rentCar = async (_carId, _rentalDuration, _renterName) => {
-        try {
-          await contract.rentCar(_carId, _rentalDuration, _renterName);
+          await contract.rentCar(_carId, _firstName, _lastName, _date, _phoneNumber, _email, _rentHours);
           console.log('Car rented successfully');
         } catch (error) {
           console.error("Error renting car:", error);
@@ -62,7 +63,7 @@ export const  RentProvider = ({children}) => {
 
 
     return (
-        <RentContext.Provider value={{cars,getAllCar,addCar,modifyCarDetails,rentCar}}>
+        <RentContext.Provider value={{rentCar}}>
             {children}
         </RentContext.Provider>
     )

@@ -11,3 +11,9 @@
   border: none;
   outline: none;
 }
+
+.payment button:disabled {
+  background: #ccc; /* Change to the desired disabled background color */
+  color: #999; /* Change to the desired disabled text color */
+  cursor: not-allowed; /* Change to the desired cursor for disabled state */
+}

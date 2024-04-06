@@ -27,6 +27,10 @@ const navLinks = [
     path: "/Register",
     display: "Register",
   },
+  {
+    path: "/Login",
+    display: "Login",
+  },
 ];
 
 const Header = () => {
@@ -37,6 +41,7 @@ const Header = () => {
   const handleRegisterClick = () => {
     // Navigate to the registration page using a suitable routing library
     navigate("/register", { replace: true }); // Example using react-router-dom v6
+    navigate("/Login", { replace: true }); 
   };
 
   return (
@@ -49,7 +54,7 @@ const Header = () => {
               <div className="header__top__left">
                 <span>Need Help?</span>
                 <span className="header__top__help">
-                  <i class="ri-phone-fill"></i> +91 7201996520
+                  <i class="ri-phone-fill"></i> +91 1234567890
                 </span>
               </div>
             </Col>

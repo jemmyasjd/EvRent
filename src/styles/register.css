@@ -1,0 +1,75 @@
+.register-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    margin-top: 20px;
+    
+  }
+  
+  .register-container h1 {
+    text-align: center;
+  }
+  
+  .register-container form {
+    display: flex;
+    flex-direction: column;
+    /* padding: 10px; */
+  }
+  
+  .register-container label {
+    margin-bottom: 5px;
+  }
+  
+  .register-container input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  .register-container button,
+  .google-sign-in {
+    padding: 10px 20px;
+    background-color: #000d6b;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    width: 175px;
+    margin: 2px;
+  }
+
+  .google-sign-in {
+    margin-top: 10px; /* Adjust spacing between buttons */
+  }
+
+  .google-sign-in:hover {
+    background-color: #000b6b; 
+  }
+
+  .google-sign-in:active {
+    background-color: #000b6b; 
+  }
+  
+  .register-container button:hover {
+    background-color: #000d6b;
+  }
+  
+  .register-container button:active {
+    background-color: #000d6b;
+  }
+
+  @media (min-width: 768px) {
+    .register-container {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  
+    .register-container form {
+      width: auto; /* Allow the form to shrink to its content */
+    }
+}
+  

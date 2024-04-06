@@ -1,23 +1,5 @@
 [
 	{
-		"inputs": [
-			{
-				"internalType": "string",
-				"name": "_model",
-				"type": "string"
-			},
-			{
-				"internalType": "uint256",
-				"name": "_rentalFee",
-				"type": "uint256"
-			}
-		],
-		"name": "addCar",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
 		"inputs": [],
 		"stateMutability": "nonpayable",
 		"type": "constructor"
@@ -34,38 +16,31 @@
 			{
 				"indexed": false,
 				"internalType": "string",
-				"name": "newModel",
+				"name": "firstName",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "lastName",
 				"type": "string"
 			},
 			{
 				"indexed": false,
 				"internalType": "uint256",
-				"name": "newRentalFee",
-				"type": "uint256"
-			}
-		],
-		"name": "CarDetailsUpdated",
-		"type": "event"
-	},
-	{
-		"anonymous": false,
-		"inputs": [
-			{
-				"indexed": true,
-				"internalType": "uint256",
-				"name": "carId",
+				"name": "date",
 				"type": "uint256"
 			},
 			{
-				"indexed": true,
-				"internalType": "address",
-				"name": "renter",
-				"type": "address"
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "phoneNumber",
+				"type": "uint256"
 			},
 			{
 				"indexed": false,
 				"internalType": "string",
-				"name": "renterName",
+				"name": "email",
 				"type": "string"
 			},
 			{
@@ -79,43 +54,12 @@
 				"internalType": "uint256",
 				"name": "rentalEndTime",
 				"type": "uint256"
-			},
-			{
-				"indexed": false,
-				"internalType": "uint256",
-				"name": "rentalFee",
-				"type": "uint256"
 			}
 		],
 		"name": "CarRented",
 		"type": "event"
 	},
 	{
-		"anonymous": false,
-		"inputs": [
-			{
-				"indexed": true,
-				"internalType": "uint256",
-				"name": "carId",
-				"type": "uint256"
-			},
-			{
-				"indexed": true,
-				"internalType": "address",
-				"name": "renter",
-				"type": "address"
-			},
-			{
-				"indexed": false,
-				"internalType": "uint256",
-				"name": "returnTime",
-				"type": "uint256"
-			}
-		],
-		"name": "CarReturned",
-		"type": "event"
-	},
-	{
 		"inputs": [
 			{
 				"internalType": "uint256",
@@ -123,53 +67,37 @@
 				"type": "uint256"
 			},
 			{
+				"internalType": "string",
+				"name": "_firstName",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_lastName",
+				"type": "string"
+			},
+			{
 				"internalType": "uint256",
-				"name": "_rentalDuration",
+				"name": "_date",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_phoneNumber",
 				"type": "uint256"
 			},
 			{
 				"internalType": "string",
-				"name": "_renterName",
+				"name": "_email",
 				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_rentHours",
+				"type": "uint256"
 			}
 		],
 		"name": "rentCar",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "_carId",
-				"type": "uint256"
-			}
-		],
-		"name": "returnCar",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "_carId",
-				"type": "uint256"
-			},
-			{
-				"internalType": "string",
-				"name": "_newModel",
-				"type": "string"
-			},
-			{
-				"internalType": "uint256",
-				"name": "_newRentalFee",
-				"type": "uint256"
-			}
-		],
-		"name": "updateCarDetails",
 		"outputs": [],
 		"stateMutability": "nonpayable",
 		"type": "function"
@@ -199,7 +127,27 @@
 		"outputs": [
 			{
 				"internalType": "string",
-				"name": "model",
+				"name": "firstName",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "lastName",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "date",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "phoneNumber",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "email",
 				"type": "string"
 			},
 			{
@@ -214,73 +162,8 @@
 			},
 			{
 				"internalType": "uint256",
-				"name": "rentalFee",
+				"name": "rentHours",
 				"type": "uint256"
-			},
-			{
-				"internalType": "address",
-				"name": "renter",
-				"type": "address"
-			},
-			{
-				"internalType": "string",
-				"name": "renterName",
-				"type": "string"
-			},
-			{
-				"internalType": "enum CarRenting.CarStatus",
-				"name": "status",
-				"type": "uint8"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "getAllCarsDetails",
-		"outputs": [
-			{
-				"components": [
-					{
-						"internalType": "string",
-						"name": "model",
-						"type": "string"
-					},
-					{
-						"internalType": "uint256",
-						"name": "rentalStartTime",
-						"type": "uint256"
-					},
-					{
-						"internalType": "uint256",
-						"name": "rentalEndTime",
-						"type": "uint256"
-					},
-					{
-						"internalType": "uint256",
-						"name": "rentalFee",
-						"type": "uint256"
-					},
-					{
-						"internalType": "address",
-						"name": "renter",
-						"type": "address"
-					},
-					{
-						"internalType": "string",
-						"name": "renterName",
-						"type": "string"
-					},
-					{
-						"internalType": "enum CarRenting.CarStatus",
-						"name": "status",
-						"type": "uint8"
-					}
-				],
-				"internalType": "struct CarRenting.Car[]",
-				"name": "",
-				"type": "tuple[]"
 			}
 		],
 		"stateMutability": "view",
@@ -302,9 +185,9 @@
 				"type": "string"
 			},
 			{
-				"internalType": "uint256",
+				"internalType": "string",
 				"name": "",
-				"type": "uint256"
+				"type": "string"
 			},
 			{
 				"internalType": "uint256",
@@ -315,11 +198,6 @@
 				"internalType": "uint256",
 				"name": "",
 				"type": "uint256"
-			},
-			{
-				"internalType": "address",
-				"name": "",
-				"type": "address"
 			},
 			{
 				"internalType": "string",
@@ -327,58 +205,6 @@
 				"type": "string"
 			},
 			{
-				"internalType": "enum CarRenting.CarStatus",
-				"name": "",
-				"type": "uint8"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "_carId",
-				"type": "uint256"
-			}
-		],
-		"name": "getTransactionHistory",
-		"outputs": [
-			{
-				"components": [
-					{
-						"internalType": "string",
-						"name": "renterName",
-						"type": "string"
-					},
-					{
-						"internalType": "uint256",
-						"name": "rentalStartTime",
-						"type": "uint256"
-					},
-					{
-						"internalType": "uint256",
-						"name": "rentalEndTime",
-						"type": "uint256"
-					},
-					{
-						"internalType": "uint256",
-						"name": "amount",
-						"type": "uint256"
-					}
-				],
-				"internalType": "struct CarRenting.Transaction[]",
-				"name": "",
-				"type": "tuple[]"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
 				"internalType": "uint256",
 				"name": "",
 				"type": "uint256"
@@ -387,28 +213,10 @@
 				"internalType": "uint256",
 				"name": "",
 				"type": "uint256"
-			}
-		],
-		"name": "transactionHistory",
-		"outputs": [
-			{
-				"internalType": "string",
-				"name": "renterName",
-				"type": "string"
 			},
 			{
 				"internalType": "uint256",
-				"name": "rentalStartTime",
-				"type": "uint256"
-			},
-			{
-				"internalType": "uint256",
-				"name": "rentalEndTime",
-				"type": "uint256"
-			},
-			{
-				"internalType": "uint256",
-				"name": "amount",
+				"name": "",
 				"type": "uint256"
 			}
 		],
