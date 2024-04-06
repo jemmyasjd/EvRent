@@ -4,7 +4,10 @@ import React, {useContext, useEffect, useState} from 'react';
 import ABI from "./CarRenting.json";
 
 // const Address = "0xB5FC52E3C8702d097C2cdea1F4305743BCad3040"; 
-const Address = "0xbF274F26D5E170242Bf6B86d7Da2Fa4CB7d3acf5"; 
+// const Address = "0xbF274F26D5E170242Bf6B86d7Da2Fa4CB7d3acf5"; 
+
+//final try address: 
+const Address = "0x1065bE6B72484540a6e9c45CD87e857d35578605";
 
 const RPC = 'https://sepolia.infura.io/v3/0a34a7e280ec4361bc97c6f447f0bd4a';
 const provider = new ethers.providers.JsonRpcProvider(RPC);
@@ -61,9 +64,19 @@ export const  RentProvider = ({children}) => {
         }
       };
 
+      const getDetails = async (_carId) => {
+        try {
+          const carDetails = await contract.getCarDetails(_carId);
+          console.log(carDetails);
+          return carDetails;
+        } catch (error) {
+          console.error("Error getting car details:", error);
+          throw new Error('Failed to get car details. Please try again.');
+        }
+      };
 
     return (
-        <RentContext.Provider value={{rentCar}}>
+        <RentContext.Provider value={{rentCar, getDetails}}>
             {children}
         </RentContext.Provider>
     )

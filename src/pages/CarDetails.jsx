@@ -22,7 +22,7 @@ const CarDetails = () => {
     phoneNumber: "",
     journeyDate: "",
     rentHours: "",
-    carId: singleCarItem.id,
+    carId: parseInt(singleCarItem.id),
   });
 
   const handleInputChange = (event) => {

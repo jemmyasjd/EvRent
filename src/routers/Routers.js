@@ -8,6 +8,8 @@ import NotFound from "../pages/NotFound";
 import Contact from "../pages/Contact";
 import Register from "../pages/register"; // Import the Register component
 import Login from "../pages/Login";
+import PaymentPage from "../pages/PaymentPage";
+import GetCarInfo from "../pages/GetCarInfo";
 
 const Routers = () => {
   return (
@@ -21,6 +23,8 @@ const Routers = () => {
       <Route path="/register" element={<Register />} /> {/* Add the register route */}
       <Route path="/Login" element={<Login />} />
       <Route path="*" element={<NotFound />} />
+      <Route path="/mastercardpage" element={<PaymentPage />} /> 
+      <Route path="/details" element={<GetCarInfo />} />
     </Routes>
   );
 };

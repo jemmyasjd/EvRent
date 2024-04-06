@@ -27,16 +27,13 @@ const PaymentMethod = ({isFormFilled,formValues  }) => {
       myDate = myDate.split("-");
       var newDate = new Date( myDate[0], myDate[1] - 1, myDate[2]);
       console.log(newDate.getTime());
-      await rentCar(formValues.carId, formValues.firstName, formValues.lastName, newDate.getTime(), formValues.phoneNumber, formValues.email, formValues.rentHours);
-      console.log(formValues.journeyDate);
+      // console.log(formValues.journeyDate);
       if (selectedOption === "mastercard") {
         // Redirect to another page if payment option is "Master Card"
         navigate("/mastercardpage"); // Specify the route to the Master Card page
       } else {
-        console.log("Submitted");
-      }
-      console.log("submitter")
-      }
+        await rentCar(parseInt(formValues.carId), formValues.firstName, formValues.lastName, newDate.getTime(), formValues.phoneNumber, formValues.email, formValues.rentHours);
+      }}
     catch(error){
       console.log(error)
     }

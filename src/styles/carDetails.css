@@ -1,0 +1,25 @@
+.car-details-container {
+    background-color: #222;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+  }
+  
+  .car-details-container h2 {
+    color: #00bcd4;
+  }
+  
+  .car-details-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .car-details-list li {
+    margin-bottom: 20px;
+  }
+  
+  .car-details-list li strong {
+    color: #00bcd4;
+  }
+  
