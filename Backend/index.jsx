@@ -5,7 +5,7 @@ const contactRouter = require('./routers/contact');
 
 const app = express();
 
-connectDB('mongodb://localhost:27017/ContactDB');
+connectDB('mongodb+srv://jemmy33jd:Mongodb.33@cluster0.1auwi0e.mongodb.net/contact_db');
 
 app.use(cors());
 app.use(express.json());

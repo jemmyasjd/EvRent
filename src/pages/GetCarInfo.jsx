@@ -2,11 +2,16 @@ import React, { useState, useEffect } from 'react';
 import '../styles/carDetails.css'; 
 import { RentContext } from "../Context/RentContext";
 import { useContext } from "react";
+import carData from "../assets/data/carData";
+
 
 const GetCarInfo = () => {
   const [carId, setCarId] = useState(0);
   const [carDetails, setCarDetails] = useState([]);
   const { getDetails } = useContext(RentContext);
+  const singleCarItem = carData.find((item) => item.id === parseInt(carId));
+  // console.log(singleCarItem);
+
 
   const formatDate = (timestamp) => {
     const date = new Date(Number(timestamp) * 1000); // Convert BigInt to Number and then to milliseconds
@@ -48,6 +53,7 @@ const GetCarInfo = () => {
             <strong>Rental Start Time:</strong> {detail.rentalStartTime}<br />
             <strong>Rental End Time:</strong> {detail.rentalEndTime}<br />
             <strong>Rent Hours:</strong> {detail.rentHours.toString()}<br />
+            <strong>Fees:</strong>{singleCarItem.price * parseInt(detail.rentHours)}
           </li>
         ))}
       </ul>
