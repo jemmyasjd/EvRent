@@ -3,6 +3,7 @@ import React from "react";
 import { Container, Row, Col, ListGroup, ListGroupItem } from "reactstrap";
 import { Link } from "react-router-dom";
 import "../../styles/footer.css";
+import { toast } from "react-toastify";
 
 const quickLinks = [
   {
@@ -23,6 +24,16 @@ const quickLinks = [
 ];
 
 const Footer = () => {
+
+  const handleSubmit = async(e) =>
+  {
+    e.preventDefault()
+    toast.success('Email registered successfully', {
+      pauseOnHover: false,
+      position: "top-center"
+    });
+  }
+
   const date = new Date();
   const year = date.getFullYear();
   return (
@@ -75,12 +86,14 @@ const Footer = () => {
             <div className="mb-4">
               <h5 className="footer__link-title">Newsletter</h5>
               <p className="section__description">Subscribe our newsletter</p>
-              <div className="newsletter">
-                <input type="email" placeholder="Email" />
-                <span>
-                  <i class="ri-send-plane-line"></i>
-                </span>
-              </div>
+           
+                <form className="newsletter" onSubmit={handleSubmit}>
+                  <input type="email" placeholder="Email" required />
+                  <button type="submit" style={{border: 0}}>
+                    <i class="ri-send-plane-line"></i>
+                  </button>
+                </form>  
+        
             </div>
           </Col>
 

@@ -1,7 +1,8 @@
 import {  createContext, useContext } from "react";
 import { initializeApp } from "firebase/app";
 import { createUserWithEmailAndPassword, getAuth, signInWithEmailAndPassword,GoogleAuthProvider,signInWithPopup,GithubAuthProvider, onAuthStateChanged } from "firebase/auth";
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const firebaseConfig = {
@@ -28,14 +29,21 @@ export const FirebaseProvider = (props) => {
   const createUser = (email, password) => {
     return createUserWithEmailAndPassword(auth, email, password).then(() => {
       // Signed in 
-      console.log('user created')
+      toast.success('User created successfully', {
+        pauseOnHover: false,
+        position: "top-center"
+      });
   })
   .catch((error) => {
       console.log(error);
       console.log(error.code);  
       console.log(error.message);
+      console.log(error.value);
       
-      
+      toast.error(error.code, {
+        pauseOnHover: false,
+        position: "top-center"
+      });
   });
   }
 
@@ -44,22 +52,38 @@ export const FirebaseProvider = (props) => {
     signInWithEmailAndPassword(auth, email, password)
     .then(() => {
 
-      console.log('user logged in')
+      toast.success('User logged in successfully', {
+        pauseOnHover: false,
+        position: "top-center"
+      });
         // Signed in 
     })
     .catch((error) => {
         console.log(error);
         console.log(error.code);  
         console.log(error.message)  
-
+        toast.error(error.code, {
+          pauseOnHover: false,
+          position: "top-center"
+        });
     });
 }
 
   const signInWithGoogle = () => {
     signInWithPopup(auth,googleProvider).then(() => {
-
-      })
+          toast.success('User logged in successfully', {
+            pauseOnHover: false,
+            position: "top-center"
+          });
+      }).catch((error) => { 
+        toast.error(error.code, {
+          pauseOnHover: false,
+          position: "top-center"
+        });
+      }
+    );
   }
+  
 
   const signupGithub = () => {
     signInWithPopup(auth,githubProvider).then(() => {
@@ -81,7 +105,7 @@ export const FirebaseProvider = (props) => {
   return (
     <FirebaseContext.Provider value={{createUser, getUser , signInWithGoogle, signupGithub, checkAuth}}>
       {props.children}
-
+    <ToastContainer/>
     </FirebaseContext.Provider>
   );
 }

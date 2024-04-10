@@ -6,6 +6,7 @@ import CommonSection from "../components/UI/CommonSection";
 import { useState } from "react";
 
 import "../styles/contact.css";
+import { toast } from "react-toastify";
 
 const socialLinks = [
   {
@@ -41,10 +42,18 @@ const Contact = () => {
       },
       body: JSON.stringify(data),
       
-    })
-    console.log(data)
-    const responce = await res.text()
-    console.log(responce)
+    }).then(()=>{
+      toast.success('Message sent successfully', {
+        pauseOnHover: false,
+        position: "top-center"
+      });
+    }).catch((error) => {
+      console.error(error.message);
+      toast.error(error.message, {
+        pauseOnHover: false,
+        position: "top-center"
+      });
+    });
 
   }
   return (
