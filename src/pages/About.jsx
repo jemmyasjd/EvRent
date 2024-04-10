@@ -32,17 +32,14 @@ const About = () => {
                 </h2>
 
                 <p className="section__description">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Eveniet veniam assumenda aperiam accusantium ex autem
-                  perferendis repellendus nostrum delectus. Nemo et dolore est
-                  tempore rem minima adipisci magni dolorum ipsam.
+                  We are committed to providing excellent customer service. 
+                  Our team is dedicated to ensuring your rental experience is hassle-free and enjoyable. 
+                  From assistance with booking to support during your rental period, we're here to help.
                 </p>
 
                 <p className="section__description">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Eveniet veniam assumenda aperiam accusantium ex autem
-                  perferendis repellendus nostrum delectus. Nemo et dolore est
-                  tempore rem minima adipisci magni dolorum ipsam.
+                  Sustainability is at the core of our business. 
+                  By choosing an electric vehicle from us, you're not only reducing your carbon footprint but also supporting the transition to a greener future.
                 </p>
 
                 <div className=" d-flex align-items-center gap-3 mt-4">
@@ -52,7 +49,7 @@ const About = () => {
 
                   <div>
                     <h6 className="section__subtitle">Need Any Help?</h6>
-                    <h4>+91 7201996520</h4>
+                    <h4>+91 1234567890</h4>
                   </div>
                 </div>
               </div>
