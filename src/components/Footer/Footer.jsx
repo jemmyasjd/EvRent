@@ -41,10 +41,8 @@ const Footer = () => {
               </h1>
             </div>
             <p className="footer__logo-content">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Consequuntur, distinctio, itaque reiciendis ab cupiditate harum ex
-              quam veniam, omnis expedita animi quibusdam obcaecati mollitia?
-              Delectus et ad illo recusandae temporibus?
+              EV Rent Car Service offers eco-friendly transportation solutions with a diverse fleet of electric vehicles. 
+              Enjoy convenient booking, reliable service, and contribute to a greener future with our sustainable mobility options.
             </p>
           </Col>
 
