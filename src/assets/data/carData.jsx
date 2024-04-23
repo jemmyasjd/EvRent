@@ -28,34 +28,34 @@ const useCarData = () => {
 const carData = [
   {
     id: 1,
-    brand: "Tesla",
+    brand: "BMW",
     rating: 112,
     carName: "BMW Malibu",
     imgUrl: img01,
     model: "Model 3",
     price: 50,
-    speed: "20kmpl",
+    speed: "20kmph",
     gps: "GPS Navigation",
     seatType: "Heated seats",
     automatic: "Automatic",
     description:
-      " Dolor labore lorem no accusam sit justo sadipscing labore invidunt voluptua, amet duo et gubergren vero gubergren dolor. At diam. Dolor labore lorem no accusam sit justo sadipscing labore invidunt voluptua, amet duo et gubergren vero gubergren dolor. At diam.",
+      " Luxury redefined. Introducing the BMW, a fully electric vehicle that blends cutting-edge technology with unparalleled comfort and elegance. Experience the future of luxury driving.",
   },
 
   {
     id: 2,
-    brand: "Toyota",
+    brand: "TATA",
     rating: 102,
     carName: "Tata Nexon",
     imgUrl: img02,
     model: "Model-2022",
     price: 50,
-    speed: "20kmpl",
+    speed: "20kmph",
     gps: "GPS Navigation",
     seatType: "Heated seats",
     automatic: "Automatic",
     description:
-      " Dolor labore lorem no accusam sit justo sadipscing labore invidunt voluptua, amet duo et gubergren vero gubergren dolor. At diam. Dolor labore lorem no accusam sit justo sadipscing labore invidunt voluptua, amet duo et gubergren vero gubergren dolor. At diam.",
+      " Luxury redefined. Introducing the TATA Nexon, a fully electric vehicle that blends cutting-edge technology with unparalleled comfort and elegance. Experience the future of luxury driving.",
   },
 
   {
@@ -66,60 +66,60 @@ const carData = [
     imgUrl: img03,
     model: "Model-2022",
     price: 65,
-    speed: "20kmpl",
+    speed: "20kmph",
     gps: "GPS Navigation",
     seatType: "Heated seats",
     automatic: "Automatic",
     description:
-      " Dolor labore lorem no accusam sit justo sadipscing labore invidunt voluptua, amet duo et gubergren vero gubergren dolor. At diam. Dolor labore lorem no accusam sit justo sadipscing labore invidunt voluptua, amet duo et gubergren vero gubergren dolor. At diam.",
+      " Luxury redefined. Introducing the BMW, a fully electric vehicle that blends cutting-edge technology with unparalleled comfort and elegance. Experience the future of luxury driving.",
   },
 
   {
     id: 4,
-    brand: "Nissan",
+    brand: "TATA",
     rating: 102,
     carName: "Tata Punch",
     imgUrl: img04,
     model: "Model-2022",
     price: 70,
-    speed: "20kmpl",
+    speed: "20kmph",
     gps: "GPS Navigation",
     seatType: "Heated seats",
     automatic: "Automatic",
     description:
-      " Dolor labore lorem no accusam sit justo sadipscing labore invidunt voluptua, amet duo et gubergren vero gubergren dolor. At diam. Dolor labore lorem no accusam sit justo sadipscing labore invidunt voluptua, amet duo et gubergren vero gubergren dolor. At diam.",
+      " Luxury redefined. Introducing the TATA, a fully electric vehicle that blends cutting-edge technology with unparalleled comfort and elegance. Experience the future of luxury driving.",
   },
 
   {
     id: 5,
-    brand: "Ferrari",
+    brand: "MG",
     rating: 94,
     carName: "MG Camry",
     imgUrl: img05,
     model: "Model-2022",
     price: 45,
-    speed: "20kmpl",
+    speed: "20kmph",
     gps: "GPS Navigation",
     seatType: "Heated seats",
     automatic: "Automatic",
     description:
-      " Dolor labore lorem no accusam sit justo sadipscing labore invidunt voluptua, amet duo et gubergren vero gubergren dolor. At diam. Dolor labore lorem no accusam sit justo sadipscing labore invidunt voluptua, amet duo et gubergren vero gubergren dolor. At diam.",
+      " Luxury redefined. Introducing the MG, a fully electric vehicle that blends cutting-edge technology with unparalleled comfort and elegance. Experience the future of luxury driving.",
   },
 
   {
     id: 6,
-    brand: "Mercedes",
+    brand: "Hyundai",
     rating: 119,
     carName: "Hyundai XC90",
     imgUrl: img06,
     model: "Model-2022",
     price: 85,
-    speed: "20kmpl",
+    speed: "20kmph",
     gps: "GPS Navigation",
     seatType: "Heated seats",
     automatic: "Automatic",
     description:
-      " Dolor labore lorem no accusam sit justo sadipscing labore invidunt voluptua, amet duo et gubergren vero gubergren dolor. At diam. Dolor labore lorem no accusam sit justo sadipscing labore invidunt voluptua, amet duo et gubergren vero gubergren dolor. At diam.",
+      " Luxury redefined. Introducing the Hyundai, a fully electric vehicle that blends cutting-edge technology with unparalleled comfort and elegance. Experience the future of luxury driving.",
   },
 
   {
@@ -130,28 +130,28 @@ const carData = [
     imgUrl: img07,
     model: "Model 3",
     price: 50,
-    speed: "20kmpl",
+    speed: "20kmph",
     gps: "GPS Navigation",
     seatType: "Heated seats",
     automatic: "Automatic",
     description:
-      " Dolor labore lorem no accusam sit justo sadipscing labore invidunt voluptua, amet duo et gubergren vero gubergren dolor. At diam. Dolor labore lorem no accusam sit justo sadipscing labore invidunt voluptua, amet duo et gubergren vero gubergren dolor. At diam.",
+      " Luxury redefined. Introducing the Audi, a fully electric vehicle that blends cutting-edge technology with unparalleled comfort and elegance. Experience the future of luxury driving.",
   },
 
   {
     id: 8,
-    brand: "Colorado",
+    brand: "Rolls Royce",
     rating: 52,
     carName: "Rolls Royce Colorado",
     imgUrl: img08,
     model: "Model 3",
     price: 50,
-    speed: "20kmpl",
+    speed: "20kmph",
     gps: "GPS Navigation",
     seatType: "Heated seats",
     automatic: "Automatic",
     description:
-      " Dolor labore lorem no accusam sit justo sadipscing labore invidunt voluptua, amet duo et gubergren vero gubergren dolor. At diam. Dolor labore lorem no accusam sit justo sadipscing labore invidunt voluptua, amet duo et gubergren vero gubergren dolor. At diam.",
+      " Luxury redefined. Introducing the Rolls Royce, a fully electric vehicle that blends cutting-edge technology with unparalleled comfort and elegance. Experience the future of luxury driving.",
   },
 ];
 
