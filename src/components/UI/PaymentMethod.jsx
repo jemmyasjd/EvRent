@@ -106,7 +106,7 @@ const PaymentMethod = ({ isFormFilled, formValues }) => {
           {/* Other payment options can be added here */}
         </div>
 
-        <div className="payment mt-3 d-flex align-items-center justify-content-between">
+        {/* <div className="payment mt-3 d-flex align-items-center justify-content-between">
           <label
             htmlFor="masterCard"
             className="d-flex align-items-center gap-2"
@@ -123,7 +123,7 @@ const PaymentMethod = ({ isFormFilled, formValues }) => {
           </label>
 
           <img src={masterCard} alt="" />
-        </div>
+        </div> */}
 
         <div className="payment text-end mt-5">
           <button type="submit">Reserve Now</button>
