@@ -7,7 +7,7 @@ const carRoutes = require('./routers/car.js');
 const app = express();
 
 
-// connectDB('mongodb+srv://jemmy33jd:Mongodb.33@cluster0.1auwi0e.mongodb.net/car_db');
+connectDB('mongodb+srv://jemmy33jd:Mongodb.33@cluster0.1auwi0e.mongodb.net/car_db');
 
 
 
