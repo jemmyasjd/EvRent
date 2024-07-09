@@ -3,6 +3,11 @@ const express = require('express');
 const cors = require('cors');
 const contactRouter = require('./routers/contact');
 const carRoutes = require('./routers/car.js');
+const corsConfig = {
+    origin: '*',
+    credentials: true,
+    methods: ['GET', 'POST', 'PUT', 'DELETE'], 
+}
 
 const app = express();
 const PORT = 5000 || process.env.PORT;
@@ -12,7 +17,7 @@ connectDB('mongodb+srv://jemmy33jd:Mongodb.33@cluster0.1auwi0e.mongodb.net/car_d
 
 
 
-app.use(cors());
+app.use(cors(corsConfig));
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 app.use('/contact/add', contactRouter)
