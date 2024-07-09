@@ -5,6 +5,7 @@ const contactRouter = require('./routers/contact');
 const carRoutes = require('./routers/car.js');
 
 const app = express();
+const PORT = 5000 || process.env.PORT;
 
 
 connectDB('mongodb+srv://jemmy33jd:Mongodb.33@cluster0.1auwi0e.mongodb.net/car_db');
@@ -23,6 +24,6 @@ app.get('/',(req,res)=>{
 })
 
 
-app.listen(5000, () => {
-    console.log('Server is running on port 3001');
+app.listen(PORT, () => {
+    console.log('Server is running');
 });
