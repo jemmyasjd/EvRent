@@ -82,6 +82,19 @@ section {
   background: #000c6bd0;
 }
 
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f2f5; /* Optional: background color for better visibility */
+  padding: 15px;
+}
+
+.cl-signIn, .cl-signUp {
+  width: 100%;
+  max-width: 400px;
+}
+
 @media only screen and (max-width: 768px) {
   section {
     padding: 30px 0px;

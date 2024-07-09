@@ -60,7 +60,7 @@ const GetCarInfo = () => {
             <strong>Rental Start Time:</strong> {detail.rentalStartTime}<br />
             <strong>Rental End Time:</strong> {detail.rentalEndTime}<br />
             <strong>Rent Hours:</strong> {detail.rentHours.toString()}<br />
-            <strong>Fees:</strong>{carId && singleCarItem.price * parseInt(detail.rentHours)}
+            <strong>Fees:</strong>{carId && singleCarItem.price * parseInt(detail.rentHours)}<br/>
           </li>
         ))}
       </ul>

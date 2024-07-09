@@ -15,10 +15,10 @@ import { RentContext } from "../../Context/RentContext";
 
 // create an array of objects
 
-const useCarData = () => {
-  const { cars } = useContext(RentContext);
-  return cars;
-};
+// const useCarData = () => {
+//   const { cars } = useContext(RentContext);
+//   return cars;
+// };
 
 
 
@@ -155,6 +155,6 @@ const carData = [
   },
 ];
 
-export { useCarData };
+// export { useCarData };
 
 export default carData;

@@ -1,5 +1,4 @@
-import React from "react";
-
+import React, { useEffect, useState } from "react";
 import HeroSlider from "../components/UI/HeroSlider";
 import Helmet from "../components/Helmet/Helmet";
 
@@ -7,13 +6,29 @@ import { Container, Row, Col } from "reactstrap";
 import FindCarForm from "../components/UI/FindCarForm";
 import AboutSection from "../components/UI/AboutSection";
 import ServicesList from "../components/UI/ServicesList";
-import carData from "../assets/data/carData";
+// import carData from "../assets/data/carData";
 import CarItem from "../components/UI/CarItem";
 import BecomeDriverSection from "../components/UI/BecomeDriverSection";
 import Testimonial from "../components/UI/Testimonial";
+import axios from "axios";
 
 
 const Home = () => {
+  const [cars, setCars] = useState([]);
+
+  useEffect(() => {
+    // Fetch car data from the backend
+    const fetchCarData = async () => {
+      try {
+        const response = await axios.get("http://localhost:5000/cars");
+        setCars(response.data);
+      } catch (error) {
+        console.error("Error fetching car data:", error);
+      }
+    };
+
+    fetchCarData();
+  }, []);
   return (
     <Helmet title="Home">
       {/* ============= hero section =========== */}
@@ -60,7 +75,7 @@ const Home = () => {
               <h2 id="Cars" className="section__title">Hot Offers</h2>
             </Col>
 
-            {carData.slice(0, 6).map((item) => (
+            {cars.slice(0, 6).map((item) => (
               <CarItem item={item} key={item.id} />
             ))}
           </Row>

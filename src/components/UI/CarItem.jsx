@@ -8,6 +8,7 @@ const CarItem = (props) => {
 
   return (
     <Col lg="4" md="4" sm="6" className="mb-5">
+      {/* <img src="all-images/cars-img/demo.png"></img> */}
       <div className="car__item">
         <div className="car__img">
           <img src={imgUrl} alt="" className="w-100" />

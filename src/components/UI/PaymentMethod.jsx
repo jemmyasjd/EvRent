@@ -1,12 +1,11 @@
 import React, { useState } from "react";
-import masterCard from "../../assets/all-images/master-card.jpg";
+// import masterCard from "../../assets/all-images/master-card.jpg";
 import "../../styles/payment-method.css";
 import { useNavigate } from "react-router-dom";
 import { RentContext } from "../../Context/RentContext";
 import { useContext } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { set } from "mongoose";
 import HashLoader from "react-spinners/HashLoader";
 
 const PaymentMethod = ({ isFormFilled, formValues }) => {

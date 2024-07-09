@@ -9,18 +9,18 @@ import "slick-carousel/slick/slick-theme.css";
 
 import { BrowserRouter as Router } from "react-router-dom";
 import { RentProvider } from "./Context/RentContext";
-import { FirebaseProvider } from '../src/Context/Firebase'
+import { ClerkProvider } from "@clerk/clerk-react";
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Router>
-      <RentProvider>
-      <FirebaseProvider>
-      <App />
-    </FirebaseProvider>
-      </RentProvider>
-    </Router>
+    <ClerkProvider publishableKey={'pk_test_aHVtYmxlLWhpcHBvLTg0LmNsZXJrLmFjY291bnRzLmRldiQ'}>
+      <Router>
+        <RentProvider>
+          <App />
+        </RentProvider>
+      </Router>
+    </ClerkProvider>
   </React.StrictMode>
 );
