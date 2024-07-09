@@ -12,7 +12,6 @@ connectDB('mongodb+srv://jemmy33jd:Mongodb.33@cluster0.1auwi0e.mongodb.net/car_d
 
 
 
-
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
