@@ -1,70 +1,36 @@
-# Getting Started with Create React App
+# EvRental App 🚗
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## INSPIRATION 🌟
 
-## Available Scripts
+**Driving the Future: Empowering EV Rental with Blockchain:**
 
-In the project directory, you can run:
+"Envision a world where renting an electric vehicle (EV) is seamless, secure, and transparent. Our mission is to revolutionize the EV rental market by leveraging blockchain technology to manage the supply chain, ensuring users have a trustworthy and efficient experience. This platform empowers users with flexibility, allowing them to choose from a variety of EVs based on their needs and budget, all while ensuring the integrity and security of transactions."
 
-### `npm start`
+## What it Does !! 👷
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+EvRental App allows users to rent electric vehicles on an hourly basis, with the entire supply chain managed through blockchain technology. Users can select from a diverse range of EVs tailored to their specific needs and budget. This system ensures that every transaction is secure, transparent, and immutable, providing peace of mind to both renters and suppliers.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## How We Build 🔧
 
-### `npm test`
+- **Frontend Development:** We developed the frontend using React to create a responsive and user-friendly interface.
+- **Smart Contracts:** Using Solidity, we crafted smart contracts to handle rental agreements and transactions. These contracts were deployed on the Ethereum blockchain using Remix IDE.
+- **Blockchain Interaction:** We utilized Ether.js to interact with the deployed smart contracts, ensuring smooth and secure communication between the frontend and blockchain.
+- **Database Management:** MongoDB was employed to store metadata related to users, vehicles, and rental transactions.
+- **Authentication:** Firebase was integrated for user authentication, providing a secure login and registration system.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Challenges We Ran Into 💀
 
-### `npm run build`
+- **Fetching Data from Blockchain:** We encountered difficulties in fetching and formatting data from the blockchain due to differences in data formats.
+- **Smart Contract Interaction:** Interacting with the smart contracts using Ether.js posed challenges, especially due to version differences.
+- **Real-Time Updates:** Ensuring real-time updates and synchronization between the blockchain and frontend required meticulous handling and optimization.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🚀 How we have used Netlify in our project? 🚀
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+**Deployment:** We deployed our application using =Netlify, ensuring it is easily accessible to users.Try : https://ev-rent.netlify.app/
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Future Scope 🔭
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **Payment Gateway Integration:** Adding payment gateways through APIs to facilitate secure and convenient transactions.
+- **Home Delivery Option:** Providing an option for home delivery of rental vehicles to enhance user convenience.
+- **Mechanic Services:** Offering mechanic services for on-site assistance and maintenance of rental vehicles.
+- **EV Taxi Service:** Expanding the platform to include an EV taxi service, providing an eco-friendly alternative for daily commutes.

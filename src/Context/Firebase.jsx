@@ -4,9 +4,9 @@ import { createUserWithEmailAndPassword, getAuth, signInWithEmailAndPassword,Goo
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-
+// REPLACE ENTIRE CONFIG WITH UR FIREBASE CONFIG
 const firebaseConfig = {
-  apiKey: "AIzaSyBLD0OoGbW9TfJ0SdyyIoSDiIv3Ek8n5VE",
+  apiKey: "YOUR_KEY",
   authDomain: "fir-c1d13.firebaseapp.com",
   projectId: "fir-c1d13",
   storageBucket: "fir-c1d13.appspot.com",
