@@ -1,4 +1,4 @@
-const {connectDB} = require('./connection.jsx');
+const {connectDB} = require('./connection.js');
 const express = require('express');
 const cors = require('cors');
 require('dotenv').config();
