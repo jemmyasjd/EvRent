@@ -1,5 +1,5 @@
-const {connectDB} = require('./connection.js');
 const express = require('express');
+const {connectDB} = require('./connection.js');
 const cors = require('cors');
 require('dotenv').config();
 const contactRouter = require('./routers/contact.js');
