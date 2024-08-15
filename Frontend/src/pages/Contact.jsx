@@ -35,7 +35,7 @@ const Contact = () => {
   const handleSubmit = async(e) => 
   {
     e.preventDefault()
-    const res = await fetch('http://localhost:3001/contact/add', {
+    const res = await fetch('https://ev-rent-back.vercel.app/contact/add', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

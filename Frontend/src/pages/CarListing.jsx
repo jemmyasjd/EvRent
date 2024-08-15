@@ -12,7 +12,7 @@ const CarListing = () => {
     // Fetch car data from the backend
     const fetchCarData = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/cars");
+        const response = await axios.get("https://ev-rent-back.vercel.app/cars");
         setCars(response.data);
         // console.log(response.data);
       } catch (error) {
