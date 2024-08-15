@@ -1,4 +1,4 @@
-# EvRental App 🚗
+# [EvRental App 🚗](https://ev-rent.netlify.app/)
 
 ## INSPIRATION 🌟
 
