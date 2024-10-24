@@ -15,7 +15,7 @@ import { ClerkProvider } from "@clerk/clerk-react";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <ClerkProvider publishableKey={''}>
+    <ClerkProvider publishableKey={'check'}>
       <Router>
         <RentProvider>
           <App />
