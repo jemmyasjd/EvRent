@@ -9,9 +9,9 @@ import ABI from "./CarRenting.json";
 //final try address: 
 const Address = "0x1065bE6B72484540a6e9c45CD87e857d35578605";
 
-const RPC = 'https://sepolia.infura.io/v3/0a34a7e280ec4361bc97c6f447f0bd4a';
+const RPC = '';
 const provider = new ethers.providers.JsonRpcProvider(RPC);
-const privateKey = '53db71af4e639f49519016fee93c96c9c3e241d5ea53d40c42edf8b7b7fc5d79'
+const privateKey = ''
 const wallet = new ethers.Wallet(privateKey, provider);
 
 const contract = new ethers.Contract(Address, ABI, wallet);
